@@ -15,6 +15,16 @@ dapat diganti menjadi
 ```
     @app.route('/settingalarm', methods=['POST'])
 ```
+buzzertone.s merupakan code untuk membunyikan buzzer saya buat menggunakan assembly dan untuk access gpionya menggunakan wiringpi bisa install wiringpi atau silakan gunakan python gpio jika tidak berkenan menginstall wiringpi
+compilenya menggunakan perintah
+```
+   gcc -o buzzertone buzzertone.s -lwiringpi
+```
+ubah juga alarm.py yang ada dibagian
+```
+    p = term.Popen(["/home/pi/ProjectAlarm/alarmraspberrypi/buzzertone"], stdout=term.PIPE)
+```
+menyesuaikan degan lokasi dari buzzertone yang ada di raspimu
 
 ## Pada Android
 
