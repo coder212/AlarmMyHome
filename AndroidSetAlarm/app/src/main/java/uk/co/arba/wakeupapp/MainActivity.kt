@@ -47,10 +47,10 @@ class MainActivity : AppCompatActivity() {
             Log.d("test","string")
             val apiSetDataInterface = ApiSetDataInterface.create()
             val sendModel = SendModel()
-            if (this.jam.equels(""){
+            if (this.jam.equals(""){
                 this.jam = "00"
             }
-            if (this.menit.equels("")){
+            if (this.menit.equals("")){
                 this.menit = "00"
             }
             sendModel.time = this.jam+":"+this.menit+":"+this.detik
