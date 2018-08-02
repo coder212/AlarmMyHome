@@ -7,6 +7,14 @@ alarm.py secara default akan mengakses atau membuat jika tidak ada /home/pi/jam.
 usahakan apiwaker.py dan alarm.py dalam satu folder silahkan ubah route sesuai keinginanmu, saya menggunakan flask jadi jangan lupa install flask menggunakan pip.
 
 alarm.py aku buat menggunakan python2.7 jadi kalo ingin mengggunakan python3 silakan sesuaikan sendiri
+app route di apiwaker.py bisa diganti bebas misalnya
+```
+    @app.route('/setalarm/api/v1.0', methods=['POST']
+````
+dapat diganti menjadi
+```
+    @app.route('/settingalarm', methods=['POST'])
+```
 
 ## Pada Android
 
@@ -14,3 +22,11 @@ Ubah IP address pada ApiDataSetInterface.kt dengan ip address raspberrymu dan po
 ```
    val BASE_URL="http://<your ip raspberry pi>:<your port in apiwaker.py>/"
 ``` 
+sesuaikan juga ApiDataSetInterfacenya
+```
+    @POST("setalarm/api/v1.0")
+````
+bisa diubah menyesuaikan dengan yang ada di apiwaker.py menjadi
+```
+    @POST("settingalarm")
+```
